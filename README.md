@@ -98,28 +98,3 @@ To run the web application locally:
     ```
     This will start the FastAPI server, typically accessible at `http://127.0.0.1:8000`. Open this URL in your web browser to interact with the translation interface.
 
-## Deployment
-
-This project can be easily deployed to platforms like Hugging Face Spaces to share your model with others.
-
-### Deploying to Hugging Face Spaces
-
-1.  **Create a Hugging Face account:** Sign up at [huggingface.co](https://huggingface.co).
-2.  **Create a new Space:**
-    *   Go to your profile and click on "New Space".
-    *   Give your Space a name (e.g., "english-to-tamil-translation").
-    *   Select "Gradio" or "Streamlit" as the Space SDK (either will work with our FastAPI app).
-    *   Choose "Public" visibility.
-3.  **Upload your files:** Upload all project files, including:
-    *   The `app` directory (containing `main.py`, `translator.py`, etc.).
-    *   The `scripts` directory.
-    *   The `checkpoints` directory.
-    *   The `dataset` directory.
-    *   `requirements.txt`.
-4.  **Create a `Procfile`:** In the "Files" tab of your Space, create a new file named `Procfile` (no extension) and add the following line:
-    ```
-    web: uvicorn app.main:app --host 0.0.0.0 --port $PORT
-    ```
-5.  **Set the `APP_FILE`:** In the "Settings" tab of your Space, set the `APP_FILE` environment variable to `app/main.py`.
-
-Hugging Face will then automatically build and launch your application, providing you with a public URL to share.
