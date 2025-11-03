@@ -1,0 +1,7 @@
+torch
+youtokentome
+fastapi
+uvicorn
+python-multipart
+sacrebleu
+python-multipart
