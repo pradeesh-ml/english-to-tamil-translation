@@ -84,17 +84,27 @@ python app/translator.py
 
 The script will prompt you to enter an English sentence and will then output the best translation found using beam search.
 
-### Local Web Application
 
-To run the web application locally:
+### Local Web Application (Gradio)
+
+To run the Gradio web application locally:
+
+
 
 1.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-2.  **Run the application:**
-    ```bash
-    python -m app.main
-    ```
-    This will start the FastAPI server, typically accessible at `http://127.0.0.1:8000`. Open this URL in your web browser to interact with the translation interface.
 
+    ```bash
+
+    pip install -r requirements.txt
+
+    ```
+
+2.  **Run the application:**
+
+    ```bash
+
+    python app.py
+
+    ```
+
+    This will start the Gradio application, typically accessible at `http://127.0.0.1:7860`. Open this URL in your web browser to interact with the translation interface.
