@@ -1,7 +1,5 @@
+Cython
+pybind11
 torch
-youtokentome
-fastapi
-uvicorn
-python-multipart
 sacrebleu
-python-multipart
+gradio
