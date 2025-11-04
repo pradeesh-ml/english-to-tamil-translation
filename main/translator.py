@@ -9,7 +9,7 @@ sys.modules['model'] = model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 bpe_model = youtokentome.BPE(model="checkpoints/bpe.model")
-checkpoint = torch.load("checkpoints/model.tar", map_location=torch.device('cpu'), weights_only=False)
+checkpoint = torch.load("checkpoints/model.tar",weights_only=False)
 model = checkpoint['model'].to(device)
 model.eval()
 
@@ -103,3 +103,4 @@ if __name__ == '__main__':
     best,all_trans=translate(sentence,beam_size=4,length_norm_coefficient=0.6)
     print("Best hypothesis:", best)
     print("\nAll hypotheses:",all_trans)
+
